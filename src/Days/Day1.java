@@ -1,6 +1,5 @@
 package Days;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -8,7 +7,7 @@ import java.util.Collections;
 class Day1 extends Day {
 
     Day1(int puzzleNumber) {
-        super(1,puzzleNumber);
+        super(1, puzzleNumber);
     }
 
     @Override
@@ -29,13 +28,13 @@ class Day1 extends Day {
 
 
         // solve puzzle
-        int result = super.getPuzzleNumber() == 1?solvePuzzle1(leftColumn, rightColumn):solvePuzzle2(leftColumn, rightColumn);
+        int result = super.getPuzzleNumber() == 1 ? solvePuzzle1(leftColumn, rightColumn) : solvePuzzle2(leftColumn, rightColumn);
 
         super.printResult(result);
 
     }
 
-    int solvePuzzle2(ArrayList<Integer> leftColumn, ArrayList<Integer> rightColumn) {
+   private   int solvePuzzle2(ArrayList<Integer> leftColumn, ArrayList<Integer> rightColumn) {
         int result = 0;
 
         for (int num : leftColumn) {
@@ -46,7 +45,7 @@ class Day1 extends Day {
         return result;
     }
 
-    int solvePuzzle1(ArrayList<Integer> leftColumn, ArrayList<Integer> rightColumn) {
+    private int solvePuzzle1(ArrayList<Integer> leftColumn, ArrayList<Integer> rightColumn) {
 
         Collections.sort(leftColumn);
         Collections.sort(rightColumn);

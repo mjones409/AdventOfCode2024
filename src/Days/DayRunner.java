@@ -2,13 +2,13 @@ package Days;
 
 public class DayRunner {
 
-    public void runDay(int day, int puzzleNumber){
-        if(puzzleNumber !=1 && puzzleNumber !=2){
+    public void runDay(int day, int puzzleNumber) {
+        if (puzzleNumber != 1 && puzzleNumber != 2) {
             System.out.println("Invalid puzzle number. There are only 2 puzzles per day.");
             return;
         }
         Day puzzle;
-        switch(day){
+        switch (day) {
             case 1:
                 puzzle = new Day1(puzzleNumber);
                 break;
@@ -17,6 +17,9 @@ public class DayRunner {
                 break;
             case 3:
                 puzzle = new Day3(puzzleNumber);
+                break;
+            case 4:
+                puzzle = new Day4(puzzleNumber);
                 break;
             default:
                 return;
